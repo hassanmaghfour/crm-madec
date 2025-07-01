@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Consultation CRM MADEC</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><img src="logo-madec.png" alt="Logo MADEC"></header>
+  <div class="card">
+    <h2>Données Clients</h2>
+    <div class="filters">
+      <select id="filterType">
+        <option value="">Tous types</option>
+        <option value="Prospect">Prospect</option>
+        <option value="Client">Client</option>
+        <option value="Partenaire">Partenaire</option>
+      </select>
+      <input type="date" id="filterDate">
+      <button onclick="applyFilters()">Filtrer</button>
+    </div>
+    <button onclick="exportToExcel()">Télécharger en Excel</button>
+    <table id="dataTable">
+      <thead><tr>
+        <th>Nom</th><th>Prénom</th><th>Email</th><th>Téléphone</th>
+        <th>Entreprise</th><th>Fonction</th><th>Type</th><th>Date contact</th>
+        <th>Source</th><th>Notes</th>
+      </tr></thead>
+      <tbody></tbody>
+    </table>
+    <button onclick="logout()">Déconnexion</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

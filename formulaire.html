@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulaire CRM MADEC</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><img src="logo-madec.png" alt="Logo MADEC"></header>
+  <div class="card">
+    <h2>Formulaire CRM</h2>
+    <form id="crmForm">
+      <label>Nom *</label><input type="text" name="nom" required>
+      <label>Prénom *</label><input type="text" name="prenom" required>
+      <label>Email *</label><input type="email" name="email" required>
+      <label>Téléphone *</label><input type="tel" name="telephone" required>
+      <label>Entreprise</label><input type="text" name="entreprise">
+      <label>Fonction</label><input type="text" name="fonction">
+      <label>Type de contact *</label>
+      <select name="typeContact" required>
+        <option value="">-- Sélectionner --</option>
+        <option value="Prospect">Prospect</option>
+        <option value="Client">Client</option>
+        <option value="Partenaire">Partenaire</option>
+      </select>
+      <label>Date premier contact *</label><input type="date" name="dateContact" required>
+      <label>Source du contact</label>
+      <select name="source">
+        <option value="">-- Sélectionner --</option>
+        <option value="Réseaux sociaux">Réseaux sociaux</option>
+        <option value="Bouche-à-oreille">Bouche-à-oreille</option>
+        <option value="Salon">Salon</option>
+        <option value="Site web">Site web</option>
+        <option value="Autre">Autre</option>
+      </select>
+      <label>Notes</label><textarea name="notes" rows="3"></textarea>
+      <button type="submit">Enregistrer</button>
+      <div class="confirmation" id="confirmationMsg"></div>
+    </form>
+    <button onclick="logout()">Déconnexion</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
